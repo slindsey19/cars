@@ -13,7 +13,11 @@ do
 			read -r MAKE
 			echo "What is the Model?"
 			read -r MODEL
-			printf "$YEAR:$MAKE:$MODEL\n" >> My_old_cars
+			printf "%s" "$YEAR" >> My_old_cars
+			printf ":" >> My_old_cars
+			printf "%s" "$MAKE" >> My_old_cars
+			printf ":" >> My_old_cars
+			printf "%s\n" "$MODEL" >> My_old_cars
 			;;
 		"2") echo "Listing Car"
 			sort My_old_cars
